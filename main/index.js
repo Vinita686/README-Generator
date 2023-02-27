@@ -40,7 +40,7 @@ inquirer.prompt([
       {
          type: "checkbox",
          message: "Which license do you want for Your Repo?",
-         choices: ["MIT", "Apache 2.0", "GPLv3", "Other"],
+         choices: ["MIT", "Apache 2.0", "GPL v3", "MPL 2.0"],
          name: "license",
         },
       {

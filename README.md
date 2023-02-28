@@ -29,7 +29,11 @@ As a developer, I want a README generator so that I can quickly create a profess
 2. When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README.
 
 
-      
-      - 
+## Submission 
+- Here is the ![walkthrough video](./main/assets/walkthrough_video.mp4) of the application.
+- See the ![Sample README](./main/assets/Sample_README.md_file.png) file.
+
+## License
+This Repository is under MIT license.
   
 

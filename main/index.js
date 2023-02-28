@@ -1,20 +1,9 @@
 
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
 // function to initialize program
 function init() {
    const fs = require("fs");
-// const path = require('path');
-const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
-
-// array of questions for user
-const questions = [
-
-];
+   const inquirer = require("inquirer");
+   const generateMarkdown = require("./utils/generateMarkdown");
 
 inquirer.prompt([
    {
@@ -28,47 +17,46 @@ inquirer.prompt([
       name: "description", 
       },
    {
-       type: "input",
-       message: "Instructions for installation?",
-       name: "installation",
+      type: "input",
+      message: "Instructions for installation?",
+      name: "installation",
       },
-     {
-        type: "input",
-        message: "What is the usage of your application?",
-        name: "usage",
-        },
-      {
-         type: "checkbox",
-         message: "Which license do you want for Your Repo?",
-         choices: ["MIT", "Apache 2.0", "GPL v3", "MPL 2.0"],
-         name: "license",
-        },
-      {
-         type: "input",
-         message: "What are the contribution guidelines for your project?",
-         name: "contributing",
-        },
-      {
-         type: "input",
-         message: "What are the test instructions for your project?",
-         name: "tests",
+   {
+      type: "input",
+      message: "What is the usage of your application?",
+      name: "usage",
       },
-      {
-         type: "input",
-         message: "What is your GitHub username?",
-         name: "github",
+   {
+      type: "checkbox",
+      message: "Which license do you want for Your Repo?",
+      choices: ["MIT", "Apache 2.0", "GPL v3", "MPL 2.0"],
+      name: "license",
       },
-      {
-         type: "input",
-         message: "What is your Email address?",
-         name: "email",
+   {
+      type: "input",
+      message: "What are the contribution guidelines for your project?",
+      name: "contributing",
+      },
+   {
+      type: "input",
+      message: "What are the test instructions for your project?",
+      name: "tests",
+      },
+   {
+      type: "input",
+      message: "What is your GitHub username?",
+      name: "github",
+      },
+   {
+      type: "input",
+      message: "What is your Email address?",
+      name: "email",
       }
-
-    
-    ])
-    .then((response) => fs.writeFile('README.md', generateMarkdown(response), (error) =>
-    error ? console.error(error) : console.info(`Success!`))
-    );
+   ])
+   .then((response) => fs.writeFile('README.md', generateMarkdown(response), (error) =>
+   
+   error ? console.error(error) : console.info(`Success!`))
+   );
 
 }
 

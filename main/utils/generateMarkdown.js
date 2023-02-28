@@ -4,7 +4,6 @@ function generateMarkdown(data) {
   
   ${licenseBadge(data)}
 
-    
   ## Table of Contents:
   - [Description](#description)
   - [Installation](#installation)
@@ -12,8 +11,7 @@ function generateMarkdown(data) {
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [License](#license)
-  - [Questions](#github)
-
+  - [Questions](#questions)
 
   ## Description
   ${data.description}
@@ -34,12 +32,12 @@ function generateMarkdown(data) {
   This Application is under ${data.license} License
 
   ## Questions
-  GitHub Link: ${data.github}
+  * Here is my GitHub Link : [My GitHub](${data.github})
 
-  E-mail: ${data.email} `;
+  * If you have some additional questions you can reach me at : ${data.email} `;
 }
 
-// function for licence badge
+// function for generating licence badge
 function licenseBadge(data) {
   const typeOfLicense = data.license[0];
   let licenseEl = "";

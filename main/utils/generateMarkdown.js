@@ -29,7 +29,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## License
-  This Application is under ${data.license} License
+  This Application is under ${data.license} License.
 
   ## Questions
   * Here is my GitHub Link : [My GitHub](${data.github})
@@ -39,18 +39,17 @@ function generateMarkdown(data) {
 
 // function for generating licence badge
 function licenseBadge(data) {
-  const typeOfLicense = data.license[0];
   let licenseEl = "";
-  if (typeOfLicense == "MIT") {
+  if (data.license == "MIT") {
   licenseEl = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
   }
-  if (typeOfLicense == "Apache 2.0") {
+  if (data.license == "Apache 2.0") {
     licenseEl = "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"
   }
-  if (typeOfLicense == "GPL v3"){
+  if (data.license == "GPL v3"){
     licenseEl = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)"
   }
-  if (typeOfLicense == "MPL 2.0") {
+  if (data.license == "MPL 2.0") {
     licenseEl = "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)"
   }
   return licenseEl
